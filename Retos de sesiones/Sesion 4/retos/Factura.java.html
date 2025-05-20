@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Factura.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Factura.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public class </span><span class="s1">Factura </span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String folio</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String cliente</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">total</span><span class="s2">;</span>
+
+    <span class="s3">// Constructor</span>
+    <span class="s0">public </span><span class="s1">Factura</span><span class="s2">(</span><span class="s1">String folio</span><span class="s2">, </span><span class="s1">String cliente</span><span class="s2">, </span><span class="s0">double </span><span class="s1">total</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">folio </span><span class="s2">= </span><span class="s1">folio</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">cliente </span><span class="s2">= </span><span class="s1">cliente</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">total </span><span class="s2">= </span><span class="s1">total</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// toString method</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s4">&quot;Factura [folio=&quot; </span><span class="s2">+ </span><span class="s1">folio </span><span class="s2">+ </span><span class="s4">&quot;, cliente=&quot; </span><span class="s2">+ </span><span class="s1">cliente </span><span class="s2">+ </span><span class="s4">&quot;, total= $&quot; </span><span class="s2">+ </span><span class="s1">total </span><span class="s2">+ </span><span class="s4">&quot;]&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// equals method</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">equals</span><span class="s2">(</span><span class="s1">Object obj</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s0">this </span><span class="s2">== </span><span class="s1">obj</span><span class="s2">) </span><span class="s0">return true</span><span class="s2">;</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">obj </span><span class="s2">== </span><span class="s0">null </span><span class="s2">|| </span><span class="s1">getClass</span><span class="s2">() != </span><span class="s1">obj</span><span class="s2">.</span><span class="s1">getClass</span><span class="s2">()) </span><span class="s0">return false</span><span class="s2">;</span>
+
+        <span class="s1">Factura factura </span><span class="s2">= (</span><span class="s1">Factura</span><span class="s2">) </span><span class="s1">obj</span><span class="s2">;</span>
+        <span class="s0">return this</span><span class="s2">.</span><span class="s1">folio</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s1">factura</span><span class="s2">.</span><span class="s1">folio</span><span class="s2">); </span><span class="s3">// Compare only folio</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// hashCode method</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">hashCode</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">folio</span><span class="s2">.</span><span class="s1">hashCode</span><span class="s2">(); </span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
